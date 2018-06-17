@@ -1,3 +1,4 @@
+<!-- Volunteer view -->
 <div class="container">
 
   <h1> Volunteers </h1> 
@@ -9,7 +10,7 @@
       <th>First day</th>
       <th>Last day</th>
     </tr>
-
+    <!-- for each volunteer in the area, show a line in the table with his data -->
     <% @volunteers.each do |volunteer| %>
       <tr>
         <td><%= volunteer.number__c %></td>      

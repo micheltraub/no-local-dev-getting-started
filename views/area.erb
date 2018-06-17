@@ -14,7 +14,7 @@
         <td><%= area.name %></td>      
         <td><%= area.spotsavailable__c %></td>
         <td><%= area.maxvolunteers__c %></td>
-        <td><%= area.id %></td>
+        <td><a href='https://volunteer-heroku-salesforce.herokuapp.com/volunteers?area_id=' + <%= area.id %> >Volunteers</a></</td>
       </tr>
     <% end %>
   </table>

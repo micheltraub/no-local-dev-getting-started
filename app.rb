@@ -36,6 +36,6 @@ end
 
 get "/volunteers" do
   @volunteers = Volunteer__c.all
-  erb :area
+  erb :volunteer
 end
 

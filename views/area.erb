@@ -1,3 +1,4 @@
+<!-- Area view -->
 <div class="container">
 
   <h1> Areas that needs volunteers </h1> 
@@ -8,11 +9,12 @@
       <th>Max Volunteers</th>
       <th></th>
     </tr>
-
+    <!-- Add a line for each area -->
     <% @areas.each do |area| %>
       <tr>
         <td><%= area.name  %></td>      
         <td>
+          <!-- if there are spots available, show a message to the user -->
           <%= area.spotsavailable__c.to_i %> 
           <% if (area.spotsavailable__c.to_i > 0) %>
             - We need you!
@@ -20,6 +22,7 @@
         </td>
         <td><%= area.maxvolunteers__c.to_i %></td>
         <td>
+          <!-- if the area has voluntees, enable a link to show who are they -->
           <% if (area.spotsavailable__c.to_i != area.maxvolunteers__c.to_i) %>
             <a href="https://volunteer-heroku-salesforce.herokuapp.com/volunteers?area_id=<%= area.sfid %>" >Volunteers</a>
           <% end %>

@@ -15,7 +15,7 @@
         <td><%= area.spotsavailable__c.to_i %></td>
         <td><%= area.maxvolunteers__c.to_i %></td>
         <td>
-          <% if @area.spotsavailable__c.to_i != @area.maxvolunteers__c.to_i %>
+          <% if (area.spotsavailable__c.to_i != area.maxvolunteers__c.to_i) %>
             <a href="https://volunteer-heroku-salesforce.herokuapp.com/volunteers?area_id=<%= area.sfid %>" >Volunteers</a>
           <% end %>
         </td>

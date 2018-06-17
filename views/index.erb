@@ -9,12 +9,8 @@
 
     <% @contacts.each do |contact| %>
       <tr>
-        <td><%= contact.firstname %></td>
-      </tr>
-      <tr>
+        <td><%= contact.firstname %></td>      
         <td><%= contact.lastname %></td>
-      </tr>
-      <tr>
         <td><%= contact.email %></td>
       </tr>
     <% end %>

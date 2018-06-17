@@ -10,12 +10,12 @@ get "/" do
 end
 
 
-class VolunteerArea < ActiveRecord::Base
-  self.table_name = 'salesforce.volunteerarea__c'
+class Contact < ActiveRecord::Base
+  self.table_name = 'salesforce.contact'
 end
 
-get "/volunteerarea" do
-  @volunteerareas = VolunteerAreas.all
+get "/contacts" do
+  @contacts = Contact.all
   erb :index
 end
 

@@ -11,10 +11,10 @@
 
     <% @areas.each do |area| %>
       <tr>
-        <td><%= area.sfid  %></td>      
+        <td><%= area.name  %></td>      
         <td><%= area.spotsavailable__c %></td>
         <td><%= area.maxvolunteers__c %></td>
-        <td><a href="https://volunteer-heroku-salesforce.herokuapp.com/volunteers?area_id=<%= area.id %>" >Volunteers</a></td>
+        <td><a href="https://volunteer-heroku-salesforce.herokuapp.com/volunteers?area_id=<%= area.sfid %>" >Volunteers</a></td>
       </tr>    
     <% end %>
   </table>

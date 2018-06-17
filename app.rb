@@ -14,9 +14,19 @@ class Contact < ActiveRecord::Base
   self.table_name = 'salesforce.contact'
 end
 
+
+class VolunteerArea__c < ActiveRecord::Base
+  self.table_name = 'salesforce.volunteerarea__c'
+end
+
 get "/contacts" do
   @contacts = Contact.all
   erb :index
+end
+
+get "/areas" do
+  @areas = VolunteerArea__c.all
+  erb :area
 end
 
 get "/create" do

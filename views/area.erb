@@ -12,7 +12,13 @@
     <% @areas.each do |area| %>
       <tr>
         <td><%= area.name  %></td>      
-        <td><%= area.spotsavailable__c.to_i %></td>
+        <td
+          <% if (area.spotsavailable__c.to_i > 0) %>
+            style="color=red"
+          <% end %>
+          >
+          <%= area.spotsavailable__c.to_i %> 
+        </td>
         <td><%= area.maxvolunteers__c.to_i %></td>
         <td>
           <% if (area.spotsavailable__c.to_i != area.maxvolunteers__c.to_i) %>

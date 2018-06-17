@@ -21,6 +21,7 @@ end
 
 class Volunteer__c < ActiveRecord::Base
   self.table_name = 'salesforce.volunteer__c'
+   scope :from_area, -> (area_id) { where volunteerarea__c: area_id }
 end
 
 get "/contacts" do
@@ -35,7 +36,7 @@ end
 
 
 get "/volunteers" do
-  @volunteers = Volunteer__c.all
+  @volunteers = Volunteer__c.from_area(params[:area_id])
   erb :volunteer
 end
 

@@ -21,7 +21,7 @@ end
 
 class Volunteer__c < ActiveRecord::Base
   self.table_name = 'salesforce.volunteer__c'
-   scope :from_area, -> (area_id) { where("name like ?", "#{area_id}%") }
+   scope :from_area, -> (area_id) { where("volunteerarea__c like ?", "#{area_id}%") }
 end
 
 get "/contacts" do

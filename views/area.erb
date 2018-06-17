@@ -5,6 +5,7 @@
       <th>Area Name</th>
       <th>Spots Available</th>
       <th>Max Volunteers</th>
+      <th></th>
     </tr>
 
     <% @areas.each do |area| %>
@@ -12,6 +13,7 @@
         <td><%= area.name %></td>      
         <td><%= area.spotsavailable__c %></td>
         <td><%= area.maxvolunteers__c %></td>
+        <td><%= area.id %></td>
       </tr>
     <% end %>
   </table>

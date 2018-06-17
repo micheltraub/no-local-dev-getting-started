@@ -7,9 +7,15 @@
       <th>Email</th>
     </tr>
 
-    <% @volunteerarea.each do |volunteerarea| %>
+    <% @contact.each do |contact| %>
       <tr>
-        <td><%= volunteerarea.name %></td>
+        <td><%= contact.firstname %></td>
+      </tr>
+      <tr>
+        <td><%= contact.lastname %></td>
+      </tr>
+      <tr>
+        <td><%= contact.email %></td>
       </tr>
     <% end %>
   </table>

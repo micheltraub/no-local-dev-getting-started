@@ -3,15 +3,20 @@
   <h1> Volunteers </h1> 
   <table class="table table-striped table-bordered">
     <tr>
+      <th>Number</th>
       <th>Name</th>
-      <th>Area</th>
+      <th>Email</th>
+      <th>First day</th>
+      <th>Last day</th>
     </tr>
 
     <% @volunteers.each do |volunteer| %>
       <tr>
-        <td><%= volunteer.name %></td>      
-        <td><%= volunteer.volunteerarea__c %></td>
-      </tr>
+        <td><%= volunteer.number__c %></td>      
+        <td><%= volunteer.email__c %></td>
+        <td><%= volunteer.startdate__c %></td>
+        <td><%= volunteer.finishdate__c %></td>        
+    </tr>
     <% end %>
   </table>
 

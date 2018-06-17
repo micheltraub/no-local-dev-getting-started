@@ -11,7 +11,7 @@
 
     <% @areas.each do |area| %>
       <tr>
-        <td><%= area.name %></td>      
+        <td><%= area.name %> <%= area %></td>      
         <td><%= area.spotsavailable__c %></td>
         <td><%= area.maxvolunteers__c %></td>
         <td><a href="https://volunteer-heroku-salesforce.herokuapp.com/volunteers?area_id=<%= area.id %>" >Volunteers</a></td>
